@@ -1,0 +1,41 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.1
+  title: Library Service by Kunal
+  description: The Libray service
+  
+tags:
+  - name: "Library"
+  
+paths:
+  /library/books:
+    get:
+      summary: This is Summary
+      tags:
+        - "Library"
+      description: This is descrition of Book 
+      operationId: getAllBookInLibrary
+      responses:
+        "200":
+          description: This means its ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+
+components:
+  schemas:
+    Book:
+      description: This is the book model
+      type: object
+      properties:
+        name:
+          description: The name of book
+          type: string
+        bookAuthor:
+          description: The name of book
+          type: string  
+          
