@@ -1,41 +1,203 @@
-openapi: 3.0.0
-
+---
+openapi: "3.0.2"
 info:
-  version: 0.0.1
-  title: Library Service by Kunal
-  description: The Libray service
-  
+  title: "Reflectoring"
+  description: "Tutorials to reverse engineer Request to OpenAPI Spec"
+  contact:
+    email: "kunal.namdeo@brain2.com"
+  version: "0.0.1-SNAPSHOT"
 tags:
-  - name: "Library"
-  
+- name: "communicationDoc"
+  description: "Operations about sending communication doc to customer"
 paths:
-  /library/books:
+  /mutationgroups/{mutationGroupId}/communications:
     get:
-      summary: This is Summary
       tags:
-        - "Library"
-      description: This is descrition of Book 
-      operationId: getAllBookInLibrary
+      - "communicationDoc"
+      summary: "Sending communication doc to user"
+      description: "Create Communication doc functionality"
+      operationId: "communicationDoc"
+      parameters:
+      - in: "path"
+        name: "mutationGroupId"
+        required: true
+        schema:
+          type: "integer"
+        description: "The Mutation GroupId"
+      - in: "query"
+        name: "policyUUID"
+        schema:
+          type: "string"
+        description: "PolicyUUIDto fetch response data"
+        required: true
       responses:
         "200":
-          description: This means its ok
+          description: "Successful operation"
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Book'
-
+                type: "object"
+                properties:
+                  value:
+                    $ref: "#/components/schemas/Value"
+        "400":
+          description: "Invalid PolicyUUID supplied"
+        "404":
+          description: "Details not found"
+      x-codegen-request-body-name: "body"
 components:
   schemas:
-    Book:
-      description: This is the book model
-      type: object
+    Value:
+      type: "object"
       properties:
+        communicatedDocuments:
+          type: "object"
+          properties:
+            mainCorrespondent:
+              $ref: "#/components/schemas/MainCorrespondent"
+            validDocumentRecipientList:
+              type: "array"
+              items:
+                $ref: "#/components/schemas/ValidDocumentRecipient"
+            addenda:
+              type: "array"
+              items:
+                $ref: "#/components/schemas/Addenda"
+            standardAddenda:
+              type: "array"
+              items:
+                $ref: "#/components/schemas/StandardAddenda"
+        communicatedInspMutations:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/CommunicatedInspMutations"
+        communicatedMutations:
+          $ref: "#/components/schemas/CommunicatedMutations"
+        documentTypeProperties:
+          $ref: "#/components/schemas/DocumentTypeProperties"
+        language:
+          type: "string"
+        paragraphConcerns:
+          $ref: "#/components/schemas/ParagraphProperties"
+        paragraphIntroduction:
+          $ref: "#/components/schemas/ParagraphProperties"
+        paragraphsPayment:
+          $ref: "#/components/schemas/ParagraphProperties"
+        policyUUID:
+          type: "string"
+        templateCode:
+          type: "string"
+        templateName:
+          type: "string"
+        useOpenBalance:
+          type: "string"
+    MainCorrespondent:
+      type: "object"
+      properties:
+        copyBrokerChecked:
+          type: "string"
+        copyBrokerDisabled:
+          type: "string"
+        recipient:
+          type: "string"
+        sendingChannel:
+          type: "string"
+    ValidDocumentRecipient:
+      type: "object"
+      properties:
+        documentRecipient:
+          type: "string"
+        isSelectableForCoCorrespondent:
+          type: "string"
+        isSelectableForMainCorrespondent:
+          type: "string"
+        isVisibleForCoCorrespondent:
+          type: "string"
+        isVisibleForMainCorrespondent:
+          type: "string"
+    Addenda:
+      type: "object"
+      properties:
+        includeModificationEnabled:
+          type: "string"
+        included:
+          type: "string"
+        templateCategory:
+          type: "string"
+    StandardAddenda:
+      type: "object"
+      properties:
+        abbreviation:
+          type: "string"
+        annexTypeName:
+          type: "string"
+        description:
+          type: "string"
+        included:
+          type: "string"
+        standardAnnexId:
+          type: "string"
+        standardAnnexTypeId:
+          type: "string"
+    CommunicatedInspMutations:
+      type: "object"
+      properties:
+        simpleCommunicationDocOverview:
+          $ref: "#/components/schemas/SimpleCommunicationDocOverview"
+        subNumber:
+          type: "string"
+    SimpleCommunicationDocOverview:
+      type: "object"
+      properties:
+        mainCorrespondent:
+          $ref: "#/components/schemas/MainCorrespondent"
+        validDocumentRecipientList:
+          type: "object"
+          properties:
+            validDocumentRecipient:
+              $ref: "#/components/schemas/ValidDocumentRecipient"
+        addenda:
+          $ref: "#/components/schemas/Addenda"
+        subNumber:
+          type: "string"
+    CommunicatedMutations:
+      type: "object"
+      properties:
+        businessCase:
+          type: "string"
+        effectivityStartDate:
+          type: "string"
+        subNumber:
+          type: "string"
+        ignoreMutationInCommunication:
+          type: "string"
+        level:
+          type: "string"
+        mutationHolderId:
+          type: "string"
+        mutationParagraph:
+          $ref: "#/components/schemas/ParagraphProperties"
+        mutationType:
+          type: "string"
+    ParagraphProperties:
+      type: "object"
+      properties:
+        code:
+          type: "string"
+        freeText:
+          type: "string"
         name:
-          description: The name of book
-          type: string
-        bookAuthor:
-          description: The name of book
-          type: string  
-          
+          type: "array"
+          items:
+            type: "string"
+        standardText:
+          type: "string"
+    DocumentTypeProperties:
+      type: "object"
+      properties:
+        fileType:
+          type: "string"
+        povc:
+          type: "string"
+        subType:
+          type: "string"

@@ -1,0 +1,199 @@
+{
+    "value": {
+      "communicatedDocuments": {
+         "mainCorrespondent": {
+            "copyBrokerChecked": "false",
+            "copyBrokerDisabled": "true",
+            "recipient": "POLICY_HOLDER",
+            "sendingChannel": "POST"         },
+         "validDocumentRecipientList": [
+            {
+               "documentRecipient": "POLICY_HOLDER",
+               "isSelectableForCoCorrespondent": "false",
+               "isSelectableForMainCorrespondent": "true",
+               "isVisibleForCoCorrespondent": "false",
+               "isVisibleForMainCorrespondent": "true"            },
+            {
+               "documentRecipient": "BROKER",
+               "isSelectableForCoCorrespondent": "true",
+               "isSelectableForMainCorrespondent": "true",
+               "isVisibleForCoCorrespondent": "true",
+               "isVisibleForMainCorrespondent": "true"            },
+            {
+               "documentRecipient": "NEW_BROKER",
+               "isSelectableForCoCorrespondent": "false",
+               "isSelectableForMainCorrespondent": "false",
+               "isVisibleForCoCorrespondent": "false",
+               "isVisibleForMainCorrespondent": "false"            },
+            {
+               "documentRecipient": "CORRESPONDENCE_ADDRESS",
+               "isSelectableForCoCorrespondent": "false",
+               "isSelectableForMainCorrespondent": "false",
+               "isVisibleForCoCorrespondent": "false",
+               "isVisibleForMainCorrespondent": "true"            },
+            {
+               "documentRecipient": "SUB_AGENT",
+               "isSelectableForCoCorrespondent": "true",
+               "isSelectableForMainCorrespondent": "true",
+               "isVisibleForCoCorrespondent": "true",
+               "isVisibleForMainCorrespondent": "true"            },
+            {
+               "documentRecipient": "STUDY_MANDATE",
+               "isSelectableForCoCorrespondent": "false",
+               "isSelectableForMainCorrespondent": "false",
+               "isVisibleForCoCorrespondent": "false",
+               "isVisibleForMainCorrespondent": "false"            }
+         ],
+         "addenda": [
+            {
+               "includeModificationEnabled": "true",
+               "included": "true",
+               "templateCategory": "POLICY"            },
+            {
+               "includeModificationEnabled": "true",
+               "included": "true",
+               "templateCategory": "BILL"            },
+            {
+               "includeModificationEnabled": "true",
+               "included": "true",
+               "templateCategory": "LETTER"            }
+         ],
+         "standardAddenda": [
+            {
+               "abbreviation": "G.I.C. - DKV Assistance",
+               "annexTypeName": "General Insurance Conditions Assitance",
+               "description": "G.I.C. - DKV Assistance - 14001 - 01-03-2019",
+               "included": "true",
+               "standardAnnexId": "78",
+               "standardAnnexTypeId": "5"            },
+            {
+               "abbreviation": "G.I.C.",
+               "annexTypeName": "General Insurance Conditions",
+               "description": "G.I.C. - 11901 - 01-01-2019",
+               "included": "true",
+               "standardAnnexId": "80",
+               "standardAnnexTypeId": "1"            },
+            {
+               "abbreviation": "T.I.C.",
+               "annexTypeName": "Tariff Insurance Conditions",
+               "description": "T.I.C. - 925/926/927/928/92I/916 - 21101 - 01-01-2010",
+               "included": "true",
+               "standardAnnexId": "126",
+               "standardAnnexTypeId": "2"            }
+         ]
+      },
+      "communicatedInspMutations": [
+         {
+            "simpleCommunicationDocOverview": {
+               "mainCorrespondent": {
+                  "copyBrokerChecked": "false",
+                  "copyBrokerDisabled": "false",
+                  "recipient": "INSURED_PERSON",
+                  "sendingChannel": "POST"               },
+               "validDocumentRecipientList": {
+                  "validDocumentRecipient": {
+                     "documentRecipient": "INSURED_PERSON",
+                     "isSelectableForCoCorrespondent": "false",
+                     "isSelectableForMainCorrespondent": "true",
+                     "isVisibleForCoCorrespondent": "false",
+                     "isVisibleForMainCorrespondent": "true"                  }
+               },
+               "addenda": {
+                  "includeModificationEnabled": "true",
+                  "included": "false",
+                  "templateCategory": "CONDITIONS_PARTICULIERES"               }
+            },
+            "subNumber": "1"         },
+         {
+            "simpleCommunicationDocOverview": {
+               "mainCorrespondent": {
+                  "copyBrokerChecked": "false",
+                  "copyBrokerDisabled": "false",
+                  "recipient": "INSURED_PERSON",
+                  "sendingChannel": "POST"               },
+               "validDocumentRecipientList": {
+                  "validDocumentRecipient": {
+                     "documentRecipient": "INSURED_PERSON",
+                     "isSelectableForCoCorrespondent": "false",
+                     "isSelectableForMainCorrespondent": "true",
+                     "isVisibleForCoCorrespondent": "false",
+                     "isVisibleForMainCorrespondent": "true"                  }
+               },
+               "addenda": {
+                  "includeModificationEnabled": "true",
+                  "included": "false",
+                  "templateCategory": "CONDITIONS_PARTICULIERES"               }
+            },
+            "subNumber": "2"         },
+         {
+            "freeParagraphs": {
+               "@nil": "true"            },
+            "level": "INSURED_PERSON",
+            "mutationDescriptions": {
+               "businessCase": "pola.mutation.tariffplan.add.with.medicard",
+               "effectivityStartDate": "2022-03-01T00:00:00Z",
+               "level": "INSURED_PERSON",
+               "mutationHolderId": "97023",
+               "mutationParagraph": {
+                  "code": "V0005",
+                  "freeText": "Nieuwe aansluiting/uitbreiding van het verzekeringsplan PLAN IS2000 aan de voorwaarden opgenomen in de bijgevoegde polis - vanaf : 01-03-2022.",
+                  "name": "add tariff plan",
+                  "standardText": "Nieuwe aansluiting/uitbreiding van het verzekeringsplan PLAN IS2000 aan de voorwaarden opgenomen in de bijgevoegde polis - vanaf : 01-03-2022."               },
+               "mutationType": "add tariff plan"            },
+            "simpleCommunicationDocOverview": {
+               "mainCorrespondent": {
+                  "copyBrokerChecked": "false",
+                  "copyBrokerDisabled": "false",
+                  "recipient": "INSURED_PERSON",
+                  "sendingChannel": "POST"               },
+               "validDocumentRecipientList": {
+                  "validDocumentRecipient": {
+                     "documentRecipient": "INSURED_PERSON",
+                     "isSelectableForCoCorrespondent": "false",
+                     "isSelectableForMainCorrespondent": "true",
+                     "isVisibleForCoCorrespondent": "false",
+                     "isVisibleForMainCorrespondent": "true"                  }
+               },
+               "addenda": {
+                  "includeModificationEnabled": "true",
+                  "included": "true",
+                  "templateCategory": "CONDITIONS_PARTICULIERES"               }
+            },
+            "subNumber": "3"         }
+      ],
+      "communicatedMutations": {
+         "businessCase": "pola.mutation.tariffplan.add.with.medicard",
+         "effectivityStartDate": "2022-03-01T00:00:00Z",
+         "subNumber": "3",
+         "ignoreMutationInCommunication": "false",
+         "level": "INSURED_PERSON",
+         "mutationHolderId": "97023",
+         "mutationParagraph": {
+            "code": "V0005",
+            "freeText": "Nieuwe aansluiting/uitbreiding van het verzekeringsplan PLAN IS2000 aan de voorwaarden opgenomen in de bijgevoegde polis - vanaf : 01-03-2022.",
+            "name": "add tariff plan",
+            "standardText": "Nieuwe aansluiting/uitbreiding van het verzekeringsplan PLAN IS2000 aan de voorwaarden opgenomen in de bijgevoegde polis - vanaf : 01-03-2022."         },
+         "mutationType": "add tariff plan"      },
+      "documentTypeProperties": {
+         "fileType": "Policy",
+         "povc": "Policy Administration",
+         "subType": "Health"      },
+      "language": "DUTCH",
+      "paragraphConcerns": {
+         "code": "F0023",
+         "freeText": "Wijziging van uw contract.",
+         "standardText": "Wijziging van uw contract."      },
+      "paragraphIntroduction": {
+         "code": "V0050",
+         "freeText": "Uw bericht van <span name=\"request_date\">25/03/2022<\/span> genoot onze beste aandacht.",
+         "standardText": "Uw bericht van <span name=\"request_date\">25/03/2022<\/span> genoot onze beste aandacht."      },
+      "paragraphsPayment": {
+         "code": "F0066",
+         "freeText": "In bijlage vindt u een betalingsbericht met een overzicht van de financiële impact van de wijzigingen op de premie. Indien u een tegoed in uw voordeel heeft, spreekt het voor zich dat onze dienst boekhouding het teveel betaalde premiebedrag zo snel mogelijk zal terugbetalen.",
+         "name": [],
+         "standardText": "In bijlage vindt u een betalingsbericht met een overzicht van de financiële impact van de wijzigingen op de premie. Indien u een tegoed in uw voordeel heeft, spreekt het voor zich dat onze dienst boekhouding het teveel betaalde premiebedrag zo snel mogelijk zal terugbetalen."      },
+      "policyUUID": "939c5211-b5d5-4e4a-a20a-4c1d2c313bc2",
+      "templateCode": "2.1.4.L",
+      "templateName": "Letter contract modification",
+      "useOpenBalance": "false"   }
+}

@@ -51,6 +51,26 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.dataformat</groupId>
+		    <artifactId>jackson-dataformat-yaml</artifactId>
+		    <version>2.13.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.openapitools</groupId>
+		    <artifactId>jackson-databind-nullable</artifactId>
+		    <version>0.2.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		        
 	</dependencies>
 
 	<build>
@@ -61,29 +81,39 @@
 			</plugin>
 			
 			<plugin>
-                <groupId>io.swagger.codegen.v3</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>3.0.18</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/library.yaml</inputSpec>
-                            <language>spring</language>
+			    <groupId>org.openapitools</groupId>
+			    <artifactId>openapi-generator-maven-plugin</artifactId>
+			    <version>5.1.0</version>
+			    <executions>
+			        <execution>
+			            <goals>
+			                <goal>generate</goal>
+			            </goals>
+			            <configuration>
+			                <inputSpec>
+			                    ${project.basedir}/src/main/resources/library.yaml
+			                </inputSpec>
+			               	<ignoreFileOverride>${project.build.outputDirectory}/spec/.openapi-generator-ignore</ignoreFileOverride>           
                             <output>${project.build.directory}/generated-sources/</output>
-                            <generateSupportingFiles>false</generateSupportingFiles>
+                           
+			                <generatorName>spring</generatorName>
+			                <generateSupportingFiles>true</generateSupportingFiles>
                             <apiPackage>com.kunal.libraryservice.api</apiPackage>
                             <modelPackage>com.kunal.libraryservice.models</modelPackage>
-                            <configOptions>
-                                <interfaceOnly>true</interfaceOnly>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
- 
+                            <supportingFilesToGenerate>
+			                    ApiUtil.java
+			                </supportingFilesToGenerate>
+			                <skipValidateSpec>true</skipValidateSpec>
+			                <configOptions>
+			                    <delegatePattern>true</delegatePattern>
+			                </configOptions>
+			                
+			                
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
+			             
 		</plugins>
 		
 		

@@ -1,0 +1,17 @@
+src/main/java/com/kunal/libraryservice/api/ApiUtil.java
+src/main/java/com/kunal/libraryservice/api/MutationgroupsApi.java
+src/main/java/com/kunal/libraryservice/api/MutationgroupsApiController.java
+src/main/java/com/kunal/libraryservice/api/MutationgroupsApiDelegate.java
+src/main/java/com/kunal/libraryservice/models/Addenda.java
+src/main/java/com/kunal/libraryservice/models/CommunicatedInspMutations.java
+src/main/java/com/kunal/libraryservice/models/CommunicatedMutations.java
+src/main/java/com/kunal/libraryservice/models/DocumentTypeProperties.java
+src/main/java/com/kunal/libraryservice/models/InlineResponse200.java
+src/main/java/com/kunal/libraryservice/models/MainCorrespondent.java
+src/main/java/com/kunal/libraryservice/models/ParagraphProperties.java
+src/main/java/com/kunal/libraryservice/models/SimpleCommunicationDocOverview.java
+src/main/java/com/kunal/libraryservice/models/SimpleCommunicationDocOverviewValidDocumentRecipientList.java
+src/main/java/com/kunal/libraryservice/models/StandardAddenda.java
+src/main/java/com/kunal/libraryservice/models/ValidDocumentRecipient.java
+src/main/java/com/kunal/libraryservice/models/Value.java
+src/main/java/com/kunal/libraryservice/models/ValueCommunicatedDocuments.java
